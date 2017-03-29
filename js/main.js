@@ -7,8 +7,7 @@ new Vue({
     operator: "+",
   },
   methods: {
-    calculate: function(event){
-      event.preventDefault();
+    calculate: function(){
       switch (this.operator) {
         case "+":
             this.c = this.a + this.b
