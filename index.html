@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <title>Calculator</title>
+</head>
+<body>
+   <div class="container">
+     <h1>Type two numbers, and choose an operation.</h1>
+     <form class="form-inline">
+       <input v-model.number="a" class="form-control">
+       <select v-model="operator" class="form-control">
+           <option>+</option>
+           <option>-</option>
+           <option>*</option>
+           <option>/</option>
+       </select>
+       <input v-model.number="b" class="form-control">
+       <button type="submit" @click="calculate" class="btn btn-primary">
+         Calculate
+       </button>
+     </form>
+     <h2>Result: {{a}} {{operator}} {{b}} = {{c}}</h2>
+     <pre>
+      {{$data}}
+     </pre>
+   </div>
+</body>
+<script src="node_modules/vue/dist/vue.min.js"></script>
+<script src="js/main.js"></script>
+</html>
