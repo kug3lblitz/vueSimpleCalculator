@@ -3,24 +3,23 @@ new Vue({
   data: {
     a: 1,
     b: 2,
-    c: null,
     operator: "+",
   },
-  methods: {
-    calculate: function(){
-      switch (this.operator) {
+  computed: {
+    c: function(){
+      switch (this.operator){
         case "+":
-            this.c = this.a + this.b
-            break;
+          return this.a + this.b
+          break;
         case "-":
-            this.c = this.a - this.b
-            break;
+          return this.a - this.b
+          break;
         case "*":
-            this.c = this.a * this.b
-            break;
+          return this.a * this.b
+          break;
         case "/":
-            this.c = this.a / this.b
-            break;
+          return this.a / this.b
+          break;
       }
     }
   },

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Calculator</title>
 </head>
 <body>
@@ -17,9 +18,6 @@
            <option>/</option>
        </select>
        <input v-model.number="b" class="form-control">
-       <button type="submit" @click.prevent="calculate" class="btn btn-primary">
-         Calculate
-       </button>
      </form>
      <h2>Result: {{a}} {{operator}} {{b}} = {{c}}</h2>
      <pre>
